@@ -1,2 +1,2 @@
-# EECS_138
+# C++ Diary
 Record of C++ programs
