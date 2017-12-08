@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <iomanip>
 
 int main()
 {
@@ -16,7 +17,7 @@ int main()
 	std::cout << ret << std::endl;
 	
 	std::stringstream ss;
-	ss << 1997 << "-" << 10 << "-" << 8;
+	ss << 1997 << "-" << std::setw(2) << std::setfill('0') << 1 << "-" << std::setw(2) << std::setfill('0') << 1;
 	
 	std::string str2;
 	ss >> str2;
