@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
 int main()
 {
@@ -13,6 +14,14 @@ int main()
 	
 	ret = str1.find("q",1);
 	std::cout << ret << std::endl;
+	
+	std::stringstream ss;
+	ss << 23 << " ";
+	
+	std::string str2;
+	ss >> str2;
+	
+	std::cout << str2 << std::endl;
 	
 	return 0;
 }
