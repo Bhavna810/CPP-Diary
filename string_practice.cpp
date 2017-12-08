@@ -16,7 +16,7 @@ int main()
 	std::cout << ret << std::endl;
 	
 	std::stringstream ss;
-	ss << 23 << " ";
+	ss << 1997 << "-" << 10 << "-" << 8;
 	
 	std::string str2;
 	ss >> str2;
