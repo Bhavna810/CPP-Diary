@@ -11,8 +11,8 @@ public:
 	string get_firstname();
 	void set_lastname(string lname);
 	string get_lastname();
-	void set_gender(string gender);
-	string get_gender();
+	void set_gender(char gender);
+	char get_gender();
 	void set_age(int age);
 	int get_age();
 	void set_account(double acc_bal);
@@ -20,7 +20,7 @@ public:
 private:
 	string m_firstname;
 	string m_lastname;
-	string m_gender;
+	char m_gender;
 	int m_age;
 	double m_account;
 };
@@ -29,7 +29,7 @@ Person::Person()
 {
 	m_firstname = "";
 	m_lastname = "";
-	m_gender = "";
+	m_gender = ' ';
 	m_age = 0;
 	m_account = 0.0;
 }
@@ -54,12 +54,12 @@ string Person::get_lastname()
 	return m_lastname;
 }
 
-void Person::set_gender(string gender)
+void Person::set_gender(char gender)
 {
 	m_gender = gender;
 }
 
-string Person::get_gender()
+char Person::get_gender()
 {
 	return m_gender;
 }
@@ -90,6 +90,21 @@ double Person::get_account()
 
 int main()
 {
+	Person person1, person2;
+	
+	person1.set_firstname( "Chandler" );
+	person1.set_lastname( "Bing" );
+	person1.set_age( 25 );
+	person1.set_gender( 'M' );
+	person1.set_account( 1020.50 );
+	
+	person2.set_firstname( "Rachel" );
+	person2.set_lastname( "Green" );
+	person2.set_age( 24 );
+	person2.set_gender( 'F' );
+	person2.set_account( 10020.50 );
+
+	
 	
 	return 0;
 }
