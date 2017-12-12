@@ -17,6 +17,7 @@ public:
 	int get_age();
 	void set_account(double acc_bal);
 	double get_account();
+	void comp_age(Person p2);
 private:
 	string m_firstname;
 	string m_lastname;
@@ -88,6 +89,17 @@ double Person::get_account()
 	return m_account;
 }
 
+void Person::comp_age(Person p2)
+{
+	if ( get_age() < p2.get_age() ){
+		cout << get_firstname() << " is younger than " << p2.get_firstname() << endl;
+	} else if ( get_age() == p2.get_age() ){
+		cout << get_firstname() << " is as old as " << p2.get_firstname() << endl;
+	} else {
+		cout << get_firstname() << " is older than " << p2.get_firstname() << endl;
+	}
+}
+
 int main()
 {
 	Person person1, person2;
@@ -103,8 +115,11 @@ int main()
 	person2.set_age( 24 );
 	person2.set_gender( 'F' );
 	person2.set_account( 10020.50 );
-
 	
+	cout << "Person 1 full name is " << person1.get_firstname() << " " << person1.get_lastname() << endl;
+	cout << "Person 2 full name is " << person2.get_firstname() << " " << person2.get_lastname() << endl;
+	
+	person1.comp_age(person2);
 	
 	return 0;
 }
