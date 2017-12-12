@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string reverse(string word);
+string reverse(string input);
 
 int main()
 {
@@ -13,8 +13,14 @@ int main()
 	string resultant_string = reverse(word);
 }
 
-string reverse(string reverse)
+string reverse(string input)
 {
-	//for( int i = word.length() - 1; i < word.length(); i--)word[i]
+	string str;
+	for( int i = input.length() - 1; i < input.length(); i--)
+	{
+		str[(input.length() - 1) - i] = input[i]; 
+	}
+	
+	return str;
 	
 }
