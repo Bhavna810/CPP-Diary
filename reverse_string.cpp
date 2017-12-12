@@ -19,9 +19,7 @@ string reverse(string input)
 	for( int i = input.length() - 1; i < input.length(); i--)
 	{
 		str += input[i];
+		//str.append( &input[i], 0, 1);
 	}
-	
-	cout << str << endl;
-	
 	return str;
 }
