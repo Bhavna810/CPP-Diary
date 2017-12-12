@@ -8,9 +8,9 @@ string reverse(string input);
 int main()
 {
 	string word = " ";
-	cout << "Give a word that you would to reverse: " << endl;
+	cout << "Give a word that you want to reverse: " << endl;
 	cin >> word;
-	string resultant_string = reverse(word);
+	cout << reverse(word) << endl;
 }
 
 string reverse(string input)
@@ -18,9 +18,10 @@ string reverse(string input)
 	string str;
 	for( int i = input.length() - 1; i < input.length(); i--)
 	{
-		str[(input.length() - 1) - i] = input[i]; 
+		str += input[i];
 	}
 	
-	return str;
+	cout << str << endl;
 	
+	return str;
 }
