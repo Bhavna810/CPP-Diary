@@ -28,10 +28,10 @@ int main()
 
 void sel_sort(int arr[], int size)
 {	
-	int min_loc = 0, temp = 0;
-	
 	for (int i = 0; i < size; i++)
 	{	
+		int min_loc = i, temp = 0;
+		
 		for (int j = i; j < size; j++) 
 		{
 			if ( arr[j] < arr[min_loc] )
@@ -39,12 +39,6 @@ void sel_sort(int arr[], int size)
 				min_loc = j;
 			}
 		}
-		std::cout << "unsorted array is - " << std::endl;
-		for (int k = i; k < size; ++k)
-		{
-			std::cout << arr[k] << " ";
-		}
-		std::cout << "\nmin value: " << arr[min_loc] << "\n\n";
 		temp = arr[i];
 		arr[i] = arr[min_loc];
 		arr[min_loc] = temp;
