@@ -5,7 +5,7 @@ void sel_sort(int arr[], int size);
 int main()
 {	
 	int size = 10;
-	int arr[] = {5, 9, 7, 1, 2, 4, 8, 3, 0, 6};
+	int arr[] = {5, 9, 7, 1, 2, 4, 8, 3, 10, 6};
 	
 	std::cout << "Initial unsorted array is: " << std::endl;
 	for (int i = 0; i < size; i++)
@@ -39,7 +39,12 @@ void sel_sort(int arr[], int size)
 				min_loc = j;
 			}
 		}
-		std::cout << arr[min_loc] << std::endl;
+		std::cout << "unsorted array is - " << std::endl;
+		for (int k = i; k < size; ++k)
+		{
+			std::cout << arr[k] << " ";
+		}
+		std::cout << "\nmin value: " << arr[min_loc] << "\n\n";
 		temp = arr[i];
 		arr[i] = arr[min_loc];
 		arr[min_loc] = temp;
