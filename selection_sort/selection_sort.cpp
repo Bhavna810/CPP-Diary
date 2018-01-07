@@ -4,8 +4,8 @@ void sel_sort(int arr[], int size);
 
 int main()
 {	
-	int size = 10;
-	int arr[] = {5, 9, 7, 1, 2, 4, 8, 3, 10, 6};
+	int size = 12;
+	int arr[] = {5, 9, 11, 7, 1, 2, 4, 8, 3, 10, 6, 0};
 	
 	std::cout << "Initial unsorted array is: " << std::endl;
 	for (int i = 0; i < size; i++)
