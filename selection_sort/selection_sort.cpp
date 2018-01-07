@@ -28,20 +28,21 @@ int main()
 
 void sel_sort(int arr[], int size)
 {	
-	int min_num = arr[0], temp = 0;
+
+	int min_loc = 0, temp = 0;
 	
 	for (int i = 0; i < size; i++)
 	{	
-		for (int j = 0; j < size; j++) 
+		for (int j = i; j < size; j++) 
 		{
-			if ( arr[j] < min_num )
+			if ( arr[j] < arr[min_loc] )
 			{
-				min_num = arr[j];
+				min_loc = j;
 			}
-			std::cout << min_num << std::endl;
-			arr[i] = temp;
-			arr[i] = min_num;
-			min_num = temp;
 		}
-	}	
-}
+		std::cout << min_loc << std::endl;
+		temp = arr[i];
+		arr[i] = arr[min_loc];
+		min_loc = temp;
+	}
+}	
