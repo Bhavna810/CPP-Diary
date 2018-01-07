@@ -28,7 +28,6 @@ int main()
 
 void sel_sort(int arr[], int size)
 {	
-
 	int min_loc = 0, temp = 0;
 	
 	for (int i = 0; i < size; i++)
@@ -40,9 +39,9 @@ void sel_sort(int arr[], int size)
 				min_loc = j;
 			}
 		}
-		std::cout << min_loc << std::endl;
+		std::cout << arr[min_loc] << std::endl;
 		temp = arr[i];
 		arr[i] = arr[min_loc];
-		min_loc = temp;
+		temp = min_loc;
 	}
 }	
