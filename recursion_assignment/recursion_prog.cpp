@@ -8,12 +8,11 @@ int recursive_func (int num)
         return val;
     else
 		std::cout << "Value is " << num << std::endl;
-		int a = --num;
-		int fac = num*a;
-		val = recursive_func(a);
-		std::cout << val << std::endl;
+		int a = num;
+		int fac = a*--num;
+		std::cout << fac << std::endl;
+		val = recursive_func(--a);
 		return fac;
-	//int val = num;
 	//if (val > 1){
 	//	int fac = num*--val;
 	//	std::cout << fac << std::endl;
