@@ -4,7 +4,7 @@ int recursive_func (int num)
 {
 	int val = 0;
 	 // If the value is less than or equal to 0, go back to the main()
-    if (num < 1)
+    if (num <= 1)
         return val;
     else
 		std::cout << "Value is " << num << std::endl;
@@ -12,6 +12,7 @@ int recursive_func (int num)
 		int fac = a*--num;
 		std::cout << fac << std::endl;
 		val = recursive_func(--a);
+		std::cout << val << std::endl;
 		return fac;
 	//if (val > 1){
 	//	int fac = num*--val;
@@ -23,7 +24,7 @@ int recursive_func (int num)
 
 int main ()
 {
-    int n = 5;
+    int n = 7;
 	int fac = 0;
     fac = recursive_func(n);
 	
