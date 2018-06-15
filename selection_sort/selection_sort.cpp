@@ -28,9 +28,11 @@ int main()
 
 void sel_sort(int arr[], int size)
 {	
+	int min_loc = 0, temp = 0;
+	
 	for (int i = 0; i < size; i++)
-	{	
-		int min_loc = i, temp = 0;
+	{			
+		min_loc = i;
 		
 		for (int j = i; j < size; j++) 
 		{
