@@ -2,26 +2,19 @@
 
 int recursive_func (int num)
 {
-	int val = 0;
-	 // If the value is less than or equal to 0, go back to the main()
+	 // If the value is equal to 1, go back to the main()
     if (num == 1){
-        return val;
+        return num;
     } else {
 		std::cout << "Value is " << num << std::endl;
-		int a = num;
-		int fac = a*--num;
-		std::cout << fac << std::endl;
-		val = recursive_func(--a);
-		std::cout << val << std::endl;
-		return fac;
+		return num * recursive_func(num - 1);
 	}
 }
 
-int main ()
+int main()
 {
-    int n = 4;
-	int fac = 0;
-    fac = recursive_func(n);
+    int n = 5;
+    int fac = recursive_func(n);
 	
 	std::cout << "Factorial is " << fac << std::endl;
 	
